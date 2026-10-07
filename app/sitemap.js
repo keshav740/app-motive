@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://appmotive.com';
+  const baseUrl = 'https://appmotivetechnologies.com';
   const now = new Date();
 
   const services = [

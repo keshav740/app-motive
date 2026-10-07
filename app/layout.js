@@ -1,7 +1,7 @@
 import './globals.css';
 
 export const metadata = {
-  metadataBase: new URL('https://appmotive.com'),
+  metadataBase: new URL('https://appmotivetechnologies.com'),
   title: {
     default: 'AppMotive Technologies — Digital Product Engineering Agency',
     template: '%s | AppMotive Technologies',
@@ -18,7 +18,7 @@ export const metadata = {
     'Cloud Architecture & DevOps',
     'AppMotive Technologies',
   ],
-  authors: [{ name: 'AppMotive Technologies', url: 'https://appmotive.com' }],
+  authors: [{ name: 'AppMotive Technologies', url: 'https://appmotivetechnologies.com' }],
   creator: 'AppMotive Technologies',
   publisher: 'AppMotive Technologies',
   robots: {
@@ -35,7 +35,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://appmotive.com',
+    url: 'https://appmotivetechnologies.com',
     siteName: 'AppMotive Technologies',
     title: 'AppMotive Technologies — Digital Product Engineering Agency',
     description:
@@ -81,13 +81,13 @@ const jsonLdOrganization = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'AppMotive Technologies',
-  url: 'https://appmotive.com',
-  logo: 'https://appmotive.com/web-logo.png',
+  url: 'https://appmotivetechnologies.com',
+  logo: 'https://appmotivetechnologies.com/web-logo.png',
   description:
     'AppMotive Technologies is a digital product engineering agency specializing in Web Development, Mobile Apps, AI & Automation, and Cloud Infrastructure.',
   contactPoint: {
     '@type': 'ContactPoint',
-    email: 'hello@appmotive.com',
+    email: 'hello@appmotivetechnologies.com',
     contactType: 'customer service',
     availableLanguage: ['English'],
   },
@@ -102,11 +102,11 @@ const jsonLdWebSite = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'AppMotive Technologies',
-  url: 'https://appmotive.com',
+  url: 'https://appmotivetechnologies.com',
   publisher: {
     '@type': 'Organization',
     name: 'AppMotive Technologies',
-    logo: 'https://appmotive.com/web-logo.png',
+    logo: 'https://appmotivetechnologies.com/web-logo.png',
   },
 };
 
