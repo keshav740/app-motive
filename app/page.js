@@ -1,16 +1,16 @@
 import HomePageClient from './HomePageClient';
 
 export const metadata = {
-  title: 'AppMotive Technologies — Digital Product Engineering & Web Development Agency',
+  title: 'Get More Customers with a Better Website & Smarter Advertising — AppMotive',
   description:
-    'AppMotive Technologies builds high-performance web applications, mobile apps, AI workflows, and digital products for ambitious brands worldwide.',
+    'We build websites and run Facebook, Instagram, and Google ads for small businesses to help them get more customers and grow.',
   alternates: {
     canonical: 'https://appmotive.com',
   },
   openGraph: {
-    title: 'AppMotive Technologies — Digital Product Engineering Agency',
+    title: 'Get More Customers with a Better Website & Smarter Advertising — AppMotive',
     description:
-      'We design, engineer, and launch production-ready web apps, mobile apps, AI solutions, and digital platforms.',
+      'We build websites and run Facebook, Instagram, and Google ads for small businesses.',
     url: 'https://appmotive.com',
     siteName: 'AppMotive Technologies',
     images: [
@@ -18,16 +18,16 @@ export const metadata = {
         url: '/hero-home.png',
         width: 1200,
         height: 630,
-        alt: 'AppMotive Technologies Digital Product Engineering',
+        alt: 'AppMotive Technologies Website & Digital Advertising',
       },
     ],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AppMotive Technologies — Digital Product Engineering Agency',
+    title: 'Get More Customers with a Better Website & Smarter Advertising — AppMotive',
     description:
-      'We design, engineer, and launch production-ready web apps, mobile apps, AI solutions, and digital platforms.',
+      'We build websites and run Facebook, Instagram, and Google ads for small businesses.',
     images: ['/hero-home.png'],
   },
 };

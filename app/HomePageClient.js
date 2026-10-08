@@ -6,33 +6,32 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 const services = [
-  ['01', 'Website Development', 'High-performance websites and platforms engineered for speed, clarity and conversion.', 'WEB', '/project-1.jpg'],
-  ['02', 'Mobile Application Development', 'Native-feeling mobile experiences designed around real user behaviour.', 'MOBILE', '/project-2.jpg'],
-  ['03', 'AI & Automation', 'Intelligent workflows and AI integrations that turn repetitive work into leverage.', 'AI', '/project-3.jpg'],
-  ['04', 'Digital Commerce', 'Scalable online storefronts and custom e-commerce experiences built for growth.', 'COMMERCE', '/service-hero.png'],
-  ['05', 'Cloud & DevOps', 'Scalable cloud infrastructure, automated pipelines and 24/7 reliability.', 'CLOUD', '/why-us.png'],
+  ['01', 'Website Development', 'High-performance, modern websites designed and engineered to turn visitors into loyal customers.', 'WEB DEV', '/project-1.jpg'],
+  ['02', 'Meta Ads (Facebook & Instagram)', 'Targeted ad campaigns on Facebook and Instagram engineered for maximum brand reach and lead generation.', 'META ADS', '/project-2.jpg'],
+  ['03', 'Google Ads', 'High-intent Search, Shopping, and Display campaigns designed to put your business first on Google.', 'GOOGLE ADS', '/project-3.jpg'],
+  ['04', 'Landing Pages', 'High-speed, custom landing pages optimized specifically to convert ad traffic into phone calls and bookings.', 'LANDING PAGES', '/service-hero.png'],
 ];
 
 const faqs = [
   {
     q: "What services does AppMotive Technologies offer?",
-    a: "We specialize in end-to-end digital product design, web application development, native & cross-platform mobile apps (React Native, iOS, Android), AI & workflow automation, and scalable cloud infrastructure."
+    a: "We specialize in custom website development, Meta ads (Facebook & Instagram), Google ads management, and high-converting landing pages for small businesses."
   },
   {
     q: "How long does a typical project take from start to launch?",
-    a: "Timelines depend on scope. A typical MVP web or mobile application takes 4 to 8 weeks, while complex enterprise platforms take 10 to 16 weeks. We work in 2-week agile sprints with regular client demos."
+    a: "Timelines depend on scope. A typical custom website or landing page takes 1 to 3 weeks, while complete ad setup and launch takes under 7 days. We work closely with you every step of the way."
   },
   {
     q: "What is your pricing structure and engagement model?",
-    a: "We offer transparent milestone-based fixed pricing for well-defined scopes, as well as dedicated engineering team retainer models for ongoing product development and iteration."
+    a: "We offer transparent fixed pricing for websites and landing pages, alongside flexible monthly ad management packages with no long-term lock-in contracts."
   },
   {
-    q: "How do you handle IP ownership and confidentiality?",
-    a: "You retain 100% full intellectual property (IP) ownership of all source code, design assets, and credentials upon milestone completion. We sign standard NDAs before any project discussions."
+    q: "How do you handle IP ownership and credentials?",
+    a: "You retain 100% full ownership of your website, source code, ad accounts, and all digital assets upon completion."
   },
   {
-    q: "Do you provide post-launch support and maintenance?",
-    a: "Yes, we provide ongoing post-launch maintenance, 24/7 server monitoring, performance tuning, and continuous feature updates to ensure your digital product stays fast and secure."
+    q: "Do you provide post-launch support and ad optimization?",
+    a: "Yes, we provide continuous A/B testing, ad creative updates, bid optimization, and weekly performance reports to maximize your ROI."
   }
 ];
 
@@ -131,24 +130,33 @@ export default function HomePageClient() {
         <div className="hero-noise" />
         <div className="hero-grid" />
         <div className="hero-copy">
-          <Reveal><div className="eyebrow"><i /> DIGITAL PRODUCTS · TECHNOLOGY · GROWTH</div></Reveal>
-          <Reveal><h1>We build digital products <em>that move.</em></h1></Reveal>
-          <Reveal><p>AppMotive Technologies creates high-performance web, mobile and AI experiences for ambitious companies.</p></Reveal>
+          <Reveal><div className="eyebrow"><i /> WEBSITES · META ADS · GOOGLE ADS · LANDING PAGES</div></Reveal>
+          <Reveal><h1>Get more customers with a <em>better website</em> and <em>smarter advertising.</em></h1></Reveal>
+          <Reveal><p>We build websites and run Facebook, Instagram, and Google ads for small businesses.</p></Reveal>
           <Reveal className="hero-actions">
             <Magnetic>
-              <Link className="primary" href="/contact">Start a project <span>↗</span></Link>
+              <Link className="primary" href="/contact">Book a free consultation <span>↗</span></Link>
             </Magnetic>
+            <Magnetic>
+              <Link className="secondary" href="#services">See our services <span>↓</span></Link>
+            </Magnetic>
+          </Reveal>
+          <Reveal className="hero-services-tags">
+            <span className="hero-service-tag">⚡ Website Development</span>
+            <span className="hero-service-tag">🎯 Meta Ads (Facebook & IG)</span>
+            <span className="hero-service-tag">📈 Google Ads</span>
+            <span className="hero-service-tag">🚀 Landing Pages</span>
           </Reveal>
           <Reveal className="hero-meta"><span>SCROLL TO EXPLORE</span><div className="scroll-line"><i /></div></Reveal>
         </div>
 
         <div className="hero-visual">
-          <TiltImage src="/hero-home.png" alt="AppMotive Technologies Digital Product Engineering Visual" className="hero-home-img" />
+          <TiltImage src="/hero-home.png" alt="AppMotive Technologies Website & Digital Advertising" className="hero-home-img" />
         </div>
       </section>
 
       <div className="marquee">
-        <div>WEB DEVELOPMENT <b>✦</b> MOBILE APPS <b>✦</b> AI SOLUTIONS <b>✦</b> PRODUCT DESIGN <b>✦</b> DIGITAL STRATEGY <b>✦</b> WEB DEVELOPMENT <b>✦</b> MOBILE APPS <b>✦</b></div>
+        <div>WEBSITE DEVELOPMENT <b>✦</b> META ADS (FB & IG) <b>✦</b> GOOGLE ADS <b>✦</b> LANDING PAGES <b>✦</b> SMALL BUSINESS GROWTH <b>✦</b> WEBSITE DEVELOPMENT <b>✦</b> META ADS <b>✦</b> GOOGLE ADS <b>✦</b></div>
       </div>
 
       <section id="services" className="section section-pad light-section" aria-labelledby="services-heading">
