@@ -223,6 +223,23 @@ export default function AdminLeadsPage() {
         </div>
 
         <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+          <Link
+            href="/admin/blogs"
+            style={{
+              padding: '8px 14px',
+              borderRadius: '8px',
+              fontSize: '0.85rem',
+              fontWeight: 600,
+              background: '#4285F4',
+              color: '#fff',
+              textDecoration: 'none',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+            }}
+          >
+            ✍️ Blog Manager (SEO)
+          </Link>
           <button onClick={() => fetchLeads()} style={styles.secondaryBtn}>
             🔄 Refresh
           </button>

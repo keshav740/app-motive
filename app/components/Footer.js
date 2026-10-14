@@ -11,6 +11,7 @@ export default function Footer() {
         <Link href="/services">Services</Link>
         <Link href="/why-us">Why Us</Link>
         <Link href="/about">About</Link>
+        <Link href="/blog">Blog</Link>
         <Link href="/contact">Contact</Link>
         <a href="mailto:info@appmotivetechnologies.com">info@appmotivetechnologies.com</a>
         <a href="tel:+919837033948">+91 9837033948</a>

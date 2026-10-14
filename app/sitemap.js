@@ -1,4 +1,9 @@
-export default function sitemap() {
+import { getAllPublishedSlugs } from '../lib/blogsDb';
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
+export default async function sitemap() {
   const baseUrl = 'https://www.appmotivetechnologies.com';
   const now = new Date();
 
@@ -21,6 +26,20 @@ export default function sitemap() {
     priority: 0.95,
   }));
 
+  // Dynamically load published blogs from Database / Fallback
+  let blogUrls = [];
+  try {
+    const publishedBlogs = await getAllPublishedSlugs();
+    blogUrls = publishedBlogs.map((b) => ({
+      url: `${baseUrl}/blog/${b.slug}`,
+      lastModified: new Date(b.updatedAt),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    }));
+  } catch (err) {
+    console.warn('Could not populate blog URLs in sitemap:', err.message);
+  }
+
   return [
     {
       url: baseUrl,
@@ -35,12 +54,19 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/blog`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/landing`,
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.95,
     },
     ...serviceUrls,
+    ...blogUrls,
     {
       url: `${baseUrl}/why-us`,
       lastModified: now,
