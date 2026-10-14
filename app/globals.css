@@ -2403,31 +2403,37 @@ footer {
   padding-top: 50px !important;
   padding-bottom: 50px !important;
 }
+
 .faq-layout {
   display: grid;
   grid-template-columns: 0.75fr 1.25fr;
   gap: 36px;
   align-items: start;
 }
+
 .faq-intro {
   position: sticky;
   top: 95px;
 }
+
 .faq-intro h2 {
   font-size: clamp(28px, 3.5vw, 42px);
   line-height: 1.05;
   letter-spacing: -2px;
   margin: 12px 0 10px;
 }
+
 .faq-intro h2 span {
   color: #8993a1;
 }
+
 .faq-intro p {
   color: var(--muted);
   font-size: 13.5px;
   line-height: 1.6;
   margin-bottom: 18px;
 }
+
 .faq-support-card {
   background: #fff;
   border: 1px solid var(--line);
@@ -2438,15 +2444,18 @@ footer {
   flex-direction: column;
   gap: 6px;
 }
+
 .faq-support-card strong {
   font: 700 14px Sora;
   color: var(--ink);
 }
+
 .faq-support-card p {
   font-size: 12px;
   margin: 0;
   color: var(--muted);
 }
+
 .faq-support-link {
   display: inline-flex;
   align-items: center;
@@ -2457,6 +2466,7 @@ footer {
   transition: opacity 0.2s;
   margin-top: 4px;
 }
+
 .faq-support-link:hover {
   opacity: 0.8;
 }
@@ -2466,6 +2476,7 @@ footer {
   flex-direction: column;
   gap: 10px;
 }
+
 .faq-item {
   background: #fff;
   border: 1px solid var(--line);
@@ -2473,13 +2484,16 @@ footer {
   overflow: hidden;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
+
 .faq-item.is-open {
   border-color: var(--blue);
   box-shadow: 0 10px 25px rgba(66, 133, 244, 0.07);
 }
+
 .faq-item:hover {
   border-color: #cbd5e1;
 }
+
 .faq-button {
   width: 100%;
   display: flex;
@@ -2493,11 +2507,13 @@ footer {
   cursor: pointer;
   outline: none;
 }
+
 .faq-question-wrap {
   display: flex;
   align-items: center;
   gap: 12px;
 }
+
 .faq-num {
   font: 700 11px Sora;
   color: var(--blue);
@@ -2505,11 +2521,13 @@ footer {
   padding: 4px 9px;
   border-radius: 99px;
 }
+
 .faq-question {
   font: 600 15px Sora;
   color: var(--ink);
   letter-spacing: -0.3px;
 }
+
 .faq-icon {
   width: 28px;
   height: 28px;
@@ -2523,11 +2541,13 @@ footer {
   transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
   flex-shrink: 0;
 }
+
 .faq-item.is-open .faq-icon {
   background: var(--blue);
   color: #fff;
   transform: rotate(45deg);
 }
+
 .faq-answer {
   padding: 0 20px 16px 58px;
   color: var(--muted);
@@ -2541,15 +2561,19 @@ footer {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+
   .faq-intro {
     position: static;
   }
+
   .faq-button {
     padding: 14px 16px;
   }
+
   .faq-answer {
     padding: 0 16px 14px 16px;
   }
+
   .faq-question {
     font-size: 14px;
   }
@@ -2562,11 +2586,13 @@ footer {
   gap: 16px;
   margin: 22px 0 24px;
 }
+
 .about-highlight-item {
   display: flex;
   align-items: flex-start;
   gap: 14px;
 }
+
 .highlight-check {
   width: 24px;
   height: 24px;
@@ -2579,17 +2605,20 @@ footer {
   flex-shrink: 0;
   margin-top: 2px;
 }
+
 .about-highlight-item strong {
   font: 600 15px Sora;
   color: var(--ink);
   display: block;
 }
+
 .about-highlight-item p {
   font-size: 13px !important;
   color: var(--muted);
   margin: 3px 0 0 !important;
   line-height: 1.5 !important;
 }
+
 /* Testimonials Section */
 .testimonials-grid {
   display: grid;
@@ -2714,12 +2743,15 @@ footer {
   .landing-header {
     padding: 12px 16px;
   }
+
   .landing-header .brand-sub {
     display: none;
   }
+
   .landing-header .brand-name {
     font-size: 1.1rem;
   }
+
   .landing-header .primary {
     padding: 7px 12px;
     font-size: 0.8rem;
@@ -3373,7 +3405,7 @@ h1.landing-hero-h1 {
   overflow: hidden;
   box-sizing: border-box;
   width: 100%;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 .dark-tech-pill,
@@ -3422,7 +3454,7 @@ h1.landing-hero-h1 {
   background: #fff;
   border-radius: 20px;
   padding: clamp(18px, 4vw, 32px);
-  box-shadow: 0 16px 45px rgba(0,0,0,0.05);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.05);
   border: 1px solid #e2e8f0;
   box-sizing: border-box;
   width: 100%;
@@ -3461,6 +3493,7 @@ h1.landing-hero-h1 {
 }
 
 @media (max-width: 768px) {
+
   /* Reduced outer padding on mobile */
   .landing-section {
     padding: 36px 12px !important;
@@ -3574,6 +3607,7 @@ h1.landing-hero-h1 {
     opacity: 0;
     transform: translateY(-6px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -3670,14 +3704,17 @@ h1.landing-hero-h1 {
   .landing-nav-header {
     padding: 8px 12px !important;
   }
+
   .landing-nav-cta {
     padding: 7px 12px !important;
     font-size: 0.8rem !important;
     border-radius: 8px !important;
   }
+
   .landing-footer {
     padding: 18px 12px !important;
   }
+
   .landing-footer-wrap {
     display: flex !important;
     flex-direction: column !important;
@@ -3687,6 +3724,7 @@ h1.landing-hero-h1 {
     justify-content: center !important;
     flex-wrap: wrap !important;
   }
+
   .landing-footer-brand {
     flex-direction: row !important;
     flex-wrap: wrap !important;
@@ -3694,12 +3732,14 @@ h1.landing-hero-h1 {
     gap: 6px !important;
     text-align: center !important;
   }
+
   .landing-footer-brand-text {
     white-space: normal !important;
     text-align: center !important;
     font-size: 0.76rem !important;
     line-height: 1.4 !important;
   }
+
   .landing-footer-copy {
     white-space: normal !important;
     text-align: center !important;
