@@ -140,7 +140,15 @@ export default function ContactClient() {
                 <span className="card-icon">✉</span>
                 <div>
                   <strong>Email Us</strong>
-                  <a href="mailto:hello@appmotive.com">hello@appmotive.com</a>
+                  <a href="mailto:info@appmotivetechnologies.com">info@appmotivetechnologies.com</a>
+                </div>
+              </div>
+
+              <div className="contact-info-card">
+                <span className="card-icon">📞</span>
+                <div>
+                  <strong>Call / WhatsApp</strong>
+                  <a href="tel:+919837033948">+91 9837033948</a>
                 </div>
               </div>
 
@@ -210,7 +218,7 @@ export default function ContactClient() {
                     id="phone"
                     type="tel"
                     required
-                    placeholder="+1 (555) 000-0000 or +91 98765 43210"
+                    placeholder="+91 9837033948"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   />

@@ -352,7 +352,7 @@ export default function LandingClient() {
         setErrorMsg(data.error || 'Failed to submit proposal request. Please try again.');
       }
     } catch (err) {
-      setErrorMsg('Network error. Please try again or email hello@appmotivetechnologies.com directly.');
+      setErrorMsg('Network error. Please try again or email info@appmotivetechnologies.com directly.');
     } finally {
       setLoading(false);
     }
@@ -585,6 +585,15 @@ export default function LandingClient() {
                 <span style={{ width: '20px', height: '20px', borderRadius: '50%', background: 'rgba(52, 168, 83, 0.12)', color: '#34A853', display: 'grid', placeItems: 'center', fontSize: '11px', flexShrink: 0 }}>✓</span>
                 100% IP &amp; code ownership under standard NDA
               </div>
+
+              <div style={{ marginTop: '16px', paddingTop: '14px', borderTop: '1px solid #e2e8f0', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <a href="mailto:info@appmotivetechnologies.com" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#07101d', fontSize: '0.86rem', textDecoration: 'none', fontWeight: 600 }}>
+                  <span style={{ color: '#4285F4' }}>✉</span> info@appmotivetechnologies.com
+                </a>
+                <a href="tel:+919837033948" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#07101d', fontSize: '0.86rem', textDecoration: 'none', fontWeight: 600 }}>
+                  <span style={{ color: '#34A853' }}>📞</span> +91 9837033948 (Call / WhatsApp)
+                </a>
+              </div>
             </div>
           </div>
 
@@ -651,7 +660,7 @@ export default function LandingClient() {
                     <input
                       type="tel"
                       required
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 9837033948"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       style={{ width: '100%', padding: '10px 12px', borderRadius: '10px', border: '1px solid #dadce0', fontSize: '0.88rem', outline: 'none', boxSizing: 'border-box' }}

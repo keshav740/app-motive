@@ -42,7 +42,8 @@ const jsonLdContact = {
   mainEntity: {
     '@type': 'Organization',
     name: 'AppMotive Technologies',
-    email: 'hello@appmotive.com',
+    email: 'info@appmotivetechnologies.com',
+    telephone: '+91-9837033948',
     url: 'https://www.appmotivetechnologies.com',
   },
 };

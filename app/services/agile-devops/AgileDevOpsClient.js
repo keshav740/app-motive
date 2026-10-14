@@ -565,7 +565,7 @@ export default function AgileDevOpsClient() {
                     id="phone"
                     type="tel"
                     required
-                    placeholder="+1 (555) 000-0000 or +91 98765 43210"
+                    placeholder="+91 9837033948"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   />
