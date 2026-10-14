@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 
 const CATEGORIES = [
@@ -68,6 +68,89 @@ export default function AdminBlogsPage() {
     serviceCtaTitle: 'Need Enterprise Engineering Assistance?',
     serviceCtaDesc: 'AppMotive engineers design, build, and deploy high-performing digital systems.',
   });
+
+  // Dynamic SEO Audit & Readiness Score
+  const seoAudit = useMemo(() => {
+    let score = 0;
+    const checks = [];
+
+    // 1. Title Length Check (15 pts)
+    const titleLen = (formData.metaTitle || formData.title || '').trim().length;
+    if (titleLen >= 35 && titleLen <= 70) {
+      score += 15;
+      checks.push({ label: `Title length is optimal (${titleLen} chars)`, status: 'pass' });
+    } else if (titleLen > 0) {
+      score += 8;
+      checks.push({ label: `Title is ${titleLen} chars (ideal: 40-65 chars)`, status: 'warn' });
+    } else {
+      checks.push({ label: 'Title is missing', status: 'fail' });
+    }
+
+    // 2. Meta Description Length Check (15 pts)
+    const descLen = (formData.metaDescription || formData.excerpt || '').trim().length;
+    if (descLen >= 110 && descLen <= 170) {
+      score += 15;
+      checks.push({ label: `Meta description is ideal (${descLen} chars)`, status: 'pass' });
+    } else if (descLen > 0) {
+      score += 8;
+      checks.push({ label: `Description is ${descLen} chars (aim for 120-165)`, status: 'warn' });
+    } else {
+      checks.push({ label: 'Meta description is missing', status: 'fail' });
+    }
+
+    // 3. Slug Quality (10 pts)
+    if (formData.slug && /^[a-z0-9-]+$/.test(formData.slug)) {
+      score += 10;
+      checks.push({ label: 'Clean search-engine-friendly slug URL', status: 'pass' });
+    } else {
+      checks.push({ label: 'Slug should only contain lowercase & hyphens', status: 'warn' });
+    }
+
+    // 4. Featured Cover Image (10 pts)
+    if (formData.coverImage && formData.coverImage.trim()) {
+      score += 10;
+      checks.push({ label: 'Featured image set for Google & Social cards', status: 'pass' });
+    } else {
+      checks.push({ label: 'Cover image is missing', status: 'fail' });
+    }
+
+    // 5. Headings Structure (15 pts)
+    const hasHeadings = (formData.content || '').includes('## ');
+    if (hasHeadings) {
+      score += 15;
+      checks.push({ label: 'Contains structured H2 subheadings for Table of Contents', status: 'pass' });
+    } else {
+      checks.push({ label: 'Add at least one H2 heading (## Topic) for structure', status: 'warn' });
+    }
+
+    // 6. Content In-Depth Word Count (20 pts)
+    const wordCount = (formData.content || '').trim().split(/\s+/).filter(Boolean).length;
+    if (wordCount >= 300) {
+      score += 20;
+      checks.push({ label: `Rich in-depth content (${wordCount} words)`, status: 'pass' });
+    } else if (wordCount >= 100) {
+      score += 12;
+      checks.push({ label: `Moderate word count (${wordCount} words - recommend 300+)`, status: 'warn' });
+    } else {
+      checks.push({ label: 'Content is too short for search engine ranking', status: 'fail' });
+    }
+
+    // 7. Focus Keywords (10 pts)
+    if (formData.keywords && formData.keywords.trim()) {
+      score += 10;
+      checks.push({ label: 'Focus SEO keywords specified', status: 'pass' });
+    } else {
+      checks.push({ label: 'Enter 2-3 focus keywords for targeted ranking', status: 'warn' });
+    }
+
+    // 8. Internal Service Link (5 pts)
+    if (formData.serviceLink) {
+      score += 5;
+      checks.push({ label: 'Internal service link configured to pass SEO authority', status: 'pass' });
+    }
+
+    return { score: Math.min(100, score), checks };
+  }, [formData]);
 
   useEffect(() => {
     const savedToken = sessionStorage.getItem('appmotive_admin_token');
@@ -878,9 +961,68 @@ export default function AdminBlogsPage() {
 
               {/* Google Live SERP Preview & SEO Settings */}
               <div style={{ background: '#07101d', padding: '20px', borderRadius: '12px', border: '1px solid #1f2e45', marginBottom: '24px' }}>
-                <h3 style={{ fontSize: '0.95rem', fontWeight: 600, margin: '0 0 14px', color: '#34A853' }}>
-                  🔍 Google Search Engine Result Preview
-                </h3>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '10px' }}>
+                  <h3 style={{ fontSize: '0.95rem', fontWeight: 600, margin: 0, color: '#34A853' }}>
+                    🔍 Google Search Engine Preview & Live SEO Audit
+                  </h3>
+                </div>
+
+                {/* Live SEO Score Gauge */}
+                <div style={{ background: '#0e1828', borderRadius: '10px', padding: '16px 20px', border: '1px solid #1f2e45', marginBottom: '20px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px', marginBottom: '12px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                      <span style={{ fontSize: '1.2rem' }}>⚡</span>
+                      <div>
+                        <div style={{ fontSize: '0.92rem', fontWeight: 700, color: '#fff' }}>Live Google SEO Readiness Score</div>
+                        <div style={{ fontSize: '0.78rem', color: '#8fa0b5' }}>Real-time audit of top search ranking signals</div>
+                      </div>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <div
+                        style={{
+                          fontSize: '1.2rem',
+                          fontWeight: 800,
+                          padding: '4px 14px',
+                          borderRadius: '8px',
+                          background: seoAudit.score >= 80 ? 'rgba(52,168,83,0.15)' : seoAudit.score >= 50 ? 'rgba(251,188,5,0.15)' : 'rgba(234,67,53,0.15)',
+                          color: seoAudit.score >= 80 ? '#34A853' : seoAudit.score >= 50 ? '#FBBC05' : '#EA4335',
+                          border: `1px solid ${seoAudit.score >= 80 ? '#34A853' : seoAudit.score >= 50 ? '#FBBC05' : '#EA4335'}`,
+                        }}
+                      >
+                        {seoAudit.score} / 100
+                      </div>
+                      <span style={{ fontSize: '0.85rem', fontWeight: 600, color: seoAudit.score >= 80 ? '#34A853' : seoAudit.score >= 50 ? '#FBBC05' : '#EA4335' }}>
+                        {seoAudit.score >= 80 ? 'Excellent' : seoAudit.score >= 50 ? 'Moderate' : 'Needs Work'}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Progress Bar */}
+                  <div style={{ width: '100%', height: '6px', background: '#07101d', borderRadius: '3px', overflow: 'hidden', marginBottom: '14px' }}>
+                    <div
+                      style={{
+                        width: `${seoAudit.score}%`,
+                        height: '100%',
+                        background: seoAudit.score >= 80 ? '#34A853' : seoAudit.score >= 50 ? '#FBBC05' : '#EA4335',
+                        transition: 'width 0.3s ease',
+                      }}
+                    />
+                  </div>
+
+                  {/* SEO Checklist */}
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '8px' }}>
+                    {seoAudit.checks.map((c, i) => (
+                      <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.78rem' }}>
+                        <span style={{ color: c.status === 'pass' ? '#34A853' : c.status === 'warn' ? '#FBBC05' : '#EA4335', fontWeight: 700 }}>
+                          {c.status === 'pass' ? '✓' : c.status === 'warn' ? '!' : '✕'}
+                        </span>
+                        <span style={{ color: c.status === 'pass' ? '#cbd5e1' : '#8fa0b5' }}>
+                          {c.label}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
 
                 {/* Live Google Mock */}
                 <div style={{ background: '#fff', borderRadius: '8px', padding: '16px', color: '#202124', fontFamily: 'Arial, sans-serif', marginBottom: '20px' }}>

@@ -2,6 +2,26 @@ import { notFound } from 'next/navigation';
 import { getBlogBySlug, getAllBlogs } from '../../../lib/blogsDb';
 import BlogPostClient from './BlogPostClient';
 
+function getBlogFaqs(blog) {
+  if (Array.isArray(blog.faqs) && blog.faqs.length > 0) {
+    return blog.faqs;
+  }
+  return [
+    {
+      q: `What are the core enterprise advantages of modern ${blog.category || 'engineering'}?`,
+      a: `Adopting modern ${blog.category || 'software architecture'} accelerates release cadences, ensures 99.99% infrastructure availability, minimizes operational overhead, and prepares systems for seamless AI integrations.`,
+    },
+    {
+      q: `How does AppMotive Technologies assist with implementation?`,
+      a: `AppMotive's certified product engineers formulate tailored migration strategies, execute zero-downtime cutovers, and implement automated CI/CD and observability guardrails.`,
+    },
+    {
+      q: `What is the typical timeframe for discovery and rollout?`,
+      a: `Our initial architectural discovery sprint takes 1 to 2 weeks, followed by phased iterative releases delivered in 2-week agile sprints with full client visibility.`,
+    },
+  ];
+}
+
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const blog = await getBlogBySlug(slug, { publishedOnly: true });
@@ -83,6 +103,8 @@ export default async function BlogPostPage({ params }) {
     ? blog.coverImage
     : `https://www.appmotivetechnologies.com${blog.coverImage}`;
 
+  const faqs = getBlogFaqs(blog);
+
   // Article / BlogPosting Schema
   const jsonLdArticle = {
     '@context': 'https://schema.org',
@@ -140,6 +162,20 @@ export default async function BlogPostPage({ params }) {
     ],
   };
 
+  // Google FAQ Schema for Rich Snippets
+  const jsonLdFaq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: f.a,
+      },
+    })),
+  };
+
   return (
     <>
       <script
@@ -150,7 +186,11 @@ export default async function BlogPostPage({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumbs) }}
       />
-      <BlogPostClient blog={blog} relatedBlogs={relatedBlogs} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
+      />
+      <BlogPostClient blog={blog} relatedBlogs={relatedBlogs} faqs={faqs} />
     </>
   );
 }

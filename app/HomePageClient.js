@@ -91,7 +91,7 @@ function TiltImage({ src, alt, className }) {
   );
 }
 
-export default function HomePageClient() {
+export default function HomePageClient({ latestBlogs = [] }) {
   const [progress, setProgress] = useState(0);
   const [activeService, setActiveService] = useState(0);
   const [openFaq, setOpenFaq] = useState(-1);
@@ -360,11 +360,105 @@ export default function HomePageClient() {
         </div>
       </section>
 
+      {/* 05 / ENGINEERING INSIGHTS & PERSPECTIVES */}
+      {latestBlogs && latestBlogs.length > 0 && (
+        <section id="insights" className="section-pad" aria-label="Latest Engineering Insights" style={{ borderTop: '1px solid var(--line, #e4e9ef)' }}>
+          <div className="section-head">
+            <Reveal>
+              <span className="kicker">05 / PERSPECTIVES & TECH STRATEGY</span>
+              <h2>Engineering Insights.<br /><span>Blueprints for modern tech leaders.</span></h2>
+              <p>Actionable guides on cloud modernization, enterprise DevOps, and practical AI automation architectures.</p>
+            </Reveal>
+            <div className="section-head-cta">
+              <Link href="/blog" className="ghost">
+                View All Articles <span>↗</span>
+              </Link>
+            </div>
+          </div>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+              gap: '28px',
+              marginTop: '40px',
+            }}
+          >
+            {latestBlogs.map((blog) => (
+              <Reveal key={blog._id}>
+                <article
+                  style={{
+                    background: '#fff',
+                    borderRadius: '16px',
+                    border: '1px solid var(--line, #e4e9ef)',
+                    overflow: 'hidden',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    boxShadow: '0 4px 20px rgba(0,0,0,0.04)',
+                    height: '100%',
+                    transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+                  }}
+                >
+                  <Link href={`/blog/${blog.slug}`} style={{ display: 'block', height: '180px', overflow: 'hidden', position: 'relative' }}>
+                    <img
+                      src={blog.coverImage || '/project-1.webp'}
+                      alt={blog.title}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
+                    <div
+                      style={{
+                        position: 'absolute',
+                        top: '12px',
+                        left: '12px',
+                        background: '#07101d',
+                        color: '#fff',
+                        fontSize: '0.72rem',
+                        fontWeight: 700,
+                        padding: '4px 10px',
+                        borderRadius: '4px',
+                        letterSpacing: '0.04em',
+                      }}
+                    >
+                      {blog.category}
+                    </div>
+                  </Link>
+
+                  <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                    <div style={{ fontSize: '0.78rem', color: 'var(--muted, #687486)', marginBottom: '8px' }}>
+                      {blog.readTime || '5 min read'}
+                    </div>
+
+                    <Link href={`/blog/${blog.slug}`} style={{ textDecoration: 'none', color: 'var(--ink, #07101d)' }}>
+                      <h3 style={{ fontSize: '1.15rem', fontWeight: 700, margin: '0 0 10px', lineHeight: 1.35 }}>
+                        {blog.title}
+                      </h3>
+                    </Link>
+
+                    <p style={{ fontSize: '0.88rem', color: 'var(--muted, #687486)', lineHeight: 1.6, marginBottom: '20px', flex: 1 }}>
+                      {blog.excerpt}
+                    </p>
+
+                    <div style={{ borderTop: '1px solid var(--line, #e4e9ef)', paddingTop: '14px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                      <span style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--ink, #07101d)' }}>
+                        {blog.author?.name || 'AppMotive Team'}
+                      </span>
+                      <Link href={`/blog/${blog.slug}`} style={{ color: 'var(--blue, #4285F4)', fontWeight: 600, fontSize: '0.85rem', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                        Read Article <span>↗</span>
+                      </Link>
+                    </div>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      )}
+
       <section id="contact" className="cta section-pad" aria-label="Call to Action">
         <div className="cta-grid" />
         <div className="cta-logo"><img src="/appmotive-logo.webp" alt="AppMotive Technologies Logo" /></div>
         <Reveal>
-          <span className="kicker">05 / LET’S BUILD</span>
+          <span className="kicker">06 / LET’S BUILD</span>
           <h2>Have an idea?<br /><span>Let’s make it real.</span></h2>
           <Magnetic>
             <Link className="primary light-btn" href="/contact">Start a conversation <span>↗</span></Link>

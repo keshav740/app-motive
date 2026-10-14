@@ -1,4 +1,5 @@
 import HomePageClient from './HomePageClient';
+import { getAllBlogs } from '../lib/blogsDb';
 
 export const metadata = {
   title: 'Get More Customers with a Better Website & Smarter Advertising — AppMotive',
@@ -95,7 +96,10 @@ const jsonLdServiceAgency = {
   priceRange: '$$$',
 };
 
-export default function Page() {
+export default async function Page() {
+  const blogs = await getAllBlogs({ publishedOnly: true });
+  const latestBlogs = blogs.slice(0, 3);
+
   return (
     <>
       <script
@@ -106,7 +110,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdServiceAgency) }}
       />
-      <HomePageClient />
+      <HomePageClient latestBlogs={latestBlogs} />
     </>
   );
 }

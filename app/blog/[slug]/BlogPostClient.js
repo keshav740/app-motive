@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
@@ -19,7 +19,16 @@ function formatDate(dateStr) {
   }
 }
 
-// Simple Markdown Renderer
+// Slugify anchor helper
+function toAnchorId(text) {
+  return String(text || '')
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+// Markdown Renderer with ID Anchors
 function MarkdownRenderer({ content }) {
   if (!content) return null;
 
@@ -73,7 +82,6 @@ function MarkdownRenderer({ content }) {
   };
 
   const renderInline = (text) => {
-    // Bold **text**
     const parts = text.split(/(\*\*[^*]+\*\*)/g);
     return parts.map((part, i) => {
       if (part.startsWith('**') && part.endsWith('**')) {
@@ -86,7 +94,6 @@ function MarkdownRenderer({ content }) {
   lines.forEach((line, index) => {
     const trimmed = line.trim();
 
-    // Code block toggle
     if (trimmed.startsWith('```')) {
       if (inCodeBlock) {
         flushCode();
@@ -102,7 +109,6 @@ function MarkdownRenderer({ content }) {
       return;
     }
 
-    // List item
     if (trimmed.startsWith('* ') || trimmed.startsWith('- ')) {
       inList = true;
       listBuffer.push(trimmed.slice(2));
@@ -111,7 +117,6 @@ function MarkdownRenderer({ content }) {
       flushList();
     }
 
-    // Horizontal rule
     if (trimmed === '---') {
       elements.push(
         <hr
@@ -126,10 +131,13 @@ function MarkdownRenderer({ content }) {
       return;
     }
 
-    // Headings
+    // Headings with clean scrollable anchor IDs
     if (trimmed.startsWith('## ')) {
+      const headingText = trimmed.slice(3).trim();
+      const anchorId = toAnchorId(headingText);
       elements.push(
         <h2
+          id={anchorId}
           key={`h2-${index}`}
           style={{
             fontSize: '1.65rem',
@@ -139,17 +147,21 @@ function MarkdownRenderer({ content }) {
             marginBottom: '18px',
             lineHeight: 1.3,
             letterSpacing: '-0.01em',
+            scrollMarginTop: '100px',
           }}
         >
-          {trimmed.slice(3)}
+          {headingText}
         </h2>
       );
       return;
     }
 
     if (trimmed.startsWith('### ')) {
+      const headingText = trimmed.slice(4).trim();
+      const anchorId = toAnchorId(headingText);
       elements.push(
         <h3
+          id={anchorId}
           key={`h3-${index}`}
           style={{
             fontSize: '1.3rem',
@@ -158,15 +170,15 @@ function MarkdownRenderer({ content }) {
             marginTop: '32px',
             marginBottom: '14px',
             lineHeight: 1.4,
+            scrollMarginTop: '100px',
           }}
         >
-          {trimmed.slice(4)}
+          {headingText}
         </h3>
       );
       return;
     }
 
-    // Blockquote
     if (trimmed.startsWith('> ')) {
       elements.push(
         <blockquote
@@ -188,12 +200,10 @@ function MarkdownRenderer({ content }) {
       return;
     }
 
-    // Blank line
     if (!trimmed) {
       return;
     }
 
-    // Standard paragraph
     elements.push(
       <p
         key={`p-${index}`}
@@ -215,9 +225,10 @@ function MarkdownRenderer({ content }) {
   return <div>{elements}</div>;
 }
 
-export default function BlogPostClient({ blog, relatedBlogs = [] }) {
+export default function BlogPostClient({ blog, relatedBlogs = [], faqs = [] }) {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [copied, setCopied] = useState(false);
+  const [openFaq, setOpenFaq] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -232,6 +243,21 @@ export default function BlogPostClient({ blog, relatedBlogs = [] }) {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Extract Table of Contents
+  const toc = useMemo(() => {
+    if (!blog?.content) return [];
+    const lines = blog.content.split('\n');
+    const items = [];
+    lines.forEach((line) => {
+      const trimmed = line.trim();
+      if (trimmed.startsWith('## ')) {
+        const title = trimmed.slice(3).trim();
+        items.push({ title, id: toAnchorId(title) });
+      }
+    });
+    return items;
+  }, [blog?.content]);
 
   const handleCopyLink = () => {
     if (typeof window !== 'undefined') {
@@ -439,7 +465,7 @@ export default function BlogPostClient({ blog, relatedBlogs = [] }) {
             borderRadius: '16px',
             overflow: 'hidden',
             border: '1px solid #1e293b',
-            marginBottom: '44px',
+            marginBottom: '40px',
             boxShadow: '0 20px 40px rgba(0, 0, 0, 0.4)',
           }}
         >
@@ -449,6 +475,49 @@ export default function BlogPostClient({ blog, relatedBlogs = [] }) {
             style={{ width: '100%', height: 'auto', maxHeight: '460px', objectFit: 'cover', display: 'block' }}
           />
         </div>
+
+        {/* Table of Contents (TOC) */}
+        {toc.length > 0 && (
+          <nav
+            aria-label="Table of Contents"
+            style={{
+              background: 'linear-gradient(145deg, #0d1829, #091322)',
+              border: '1px solid #1e293b',
+              borderRadius: '14px',
+              padding: '24px 28px',
+              marginBottom: '44px',
+              boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '14px' }}>
+              <span style={{ fontSize: '1.1rem' }}>📑</span>
+              <span style={{ fontSize: '0.88rem', fontWeight: 700, color: '#fff', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                Table of Contents
+              </span>
+            </div>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              {toc.map((item, idx) => (
+                <li key={idx}>
+                  <a
+                    href={`#${item.id}`}
+                    style={{
+                      color: '#8ab4f8',
+                      textDecoration: 'none',
+                      fontSize: '0.92rem',
+                      display: 'flex',
+                      alignItems: 'baseline',
+                      gap: '8px',
+                      transition: 'color 0.15s ease',
+                    }}
+                  >
+                    <span style={{ color: '#4285F4', fontSize: '0.8rem', fontWeight: 600 }}>0{idx + 1}.</span>
+                    <span>{item.title}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
 
         {/* Article Body Content */}
         <article style={{ fontSize: '1.05rem', color: '#cbd5e1', lineHeight: '1.8' }}>
@@ -479,6 +548,65 @@ export default function BlogPostClient({ blog, relatedBlogs = [] }) {
               ))}
             </div>
           </div>
+        )}
+
+        {/* FAQ Accordion Section (Google Rich Snippets) */}
+        {faqs && faqs.length > 0 && (
+          <section style={{ marginTop: '56px', paddingTop: '36px', borderTop: '1px solid #1e293b' }}>
+            <h3 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#fff', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <span style={{ color: '#4285F4' }}>❓</span> Frequently Asked Questions
+            </h3>
+            <p style={{ color: '#8fa0b5', fontSize: '0.9rem', margin: '0 0 20px' }}>
+              Key architectural questions answered by our engineering specialists.
+            </p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {faqs.map((faq, idx) => {
+                const isOpen = openFaq === idx;
+                return (
+                  <div
+                    key={idx}
+                    style={{
+                      background: '#0d1829',
+                      border: '1px solid #1e293b',
+                      borderRadius: '10px',
+                      overflow: 'hidden',
+                      transition: 'border-color 0.2s ease',
+                    }}
+                  >
+                    <button
+                      onClick={() => setOpenFaq(isOpen ? -1 : idx)}
+                      style={{
+                        width: '100%',
+                        textAlign: 'left',
+                        padding: '16px 20px',
+                        background: 'transparent',
+                        border: 'none',
+                        color: '#fff',
+                        fontSize: '0.98rem',
+                        fontWeight: 600,
+                        cursor: 'pointer',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        gap: '12px',
+                      }}
+                    >
+                      <span>{faq.q}</span>
+                      <span style={{ color: '#4285F4', fontSize: '1.2rem', fontWeight: 700 }}>
+                        {isOpen ? '−' : '+'}
+                      </span>
+                    </button>
+                    {isOpen && (
+                      <div style={{ padding: '0 20px 18px', color: '#94a3b8', fontSize: '0.92rem', lineHeight: '1.6' }}>
+                        {faq.a}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </section>
         )}
 
         {/* Service CTA Internal Link Box (SEO Link Equity & Lead Gen) */}
