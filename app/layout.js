@@ -1,4 +1,6 @@
 import Script from 'next/script';
+import Chatbot from './components/Chatbot';
+import ScrollToTop from './components/ScrollToTop';
 import './globals.css';
 
 export const metadata = {
@@ -134,6 +136,8 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {children}
+        <Chatbot />
+        <ScrollToTop />
         {/* Google tag (gtag.js) */}
         <Script
           strategy="afterInteractive"
