@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 
 const QUICK_PROMPTS = [
   '💼 What services do you offer?',
@@ -16,6 +17,7 @@ const INITIAL_MESSAGE = {
 };
 
 export default function Chatbot() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [showTooltip, setShowTooltip] = useState(true);
   const [messages, setMessages] = useState([INITIAL_MESSAGE]);
@@ -115,6 +117,11 @@ export default function Chatbot() {
       );
     });
   };
+
+  // Do not show on admin panels (e.g. /admin/blogs, /admin/leads)
+  if (pathname?.startsWith('/admin') || pathname?.startsWith('/leads')) {
+    return null;
+  }
 
   return (
     <div style={{ position: 'fixed', bottom: '24px', right: '24px', zIndex: 99999, fontFamily: 'Poppins, sans-serif' }}>

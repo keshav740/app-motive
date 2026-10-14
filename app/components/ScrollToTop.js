@@ -1,8 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function ScrollToTop() {
+  const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -29,6 +31,11 @@ export default function ScrollToTop() {
       behavior: 'smooth',
     });
   };
+
+  // Do not show on admin panels (e.g. /admin/blogs, /admin/leads)
+  if (pathname?.startsWith('/admin') || pathname?.startsWith('/leads')) {
+    return null;
+  }
 
   return (
     <div
