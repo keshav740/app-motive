@@ -201,7 +201,7 @@ export default function HomePageClient() {
             <p>{services[activeService >= 0 ? activeService : 0][2]}</p>
             <div className="stage-bottom">
               <span>APP / MOTIVE</span>
-              <Link href="/services" style={{ color: 'inherit', textDecoration: 'none' }}>EXPLORE CAPABILITY ↗</Link>
+              <Link href={activeService === 3 ? "/landing" : "/services"} style={{ color: 'inherit', textDecoration: 'none' }}>EXPLORE CAPABILITY ↗</Link>
             </div>
           </div>
 
@@ -228,7 +228,7 @@ export default function HomePageClient() {
                     <p>{d}</p>
                     <div className="stage-bottom">
                       <span>APP / MOTIVE</span>
-                      <Link href="/services" style={{ color: 'inherit', textDecoration: 'none' }}>EXPLORE CAPABILITY ↗</Link>
+                      <Link href={i === 3 ? "/landing" : "/services"} style={{ color: 'inherit', textDecoration: 'none' }}>EXPLORE CAPABILITY ↗</Link>
                     </div>
                   </div>
                 )}
