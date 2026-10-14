@@ -241,7 +241,7 @@ export default function AiAutomationClient() {
       {/* Header */}
       <header className="landing-header">
         <Link className="brand" href="/" aria-label="AppMotive Technologies Homepage">
-          <img src="/web-logo.png" alt="AppMotive Technologies Logo" className="brand-logo" />
+          <img src="/web-logo.webp" alt="AppMotive Technologies Logo" className="brand-logo" />
           <div className="brand-text">
             <span className="brand-name" style={{ color: '#07101d' }}>
               App<em style={{ color: '#34A853', fontStyle: 'normal' }}>Motive</em><span style={{ color: '#07101d', fontSize: '0.7em', marginLeft: '2px' }}>®</span>
@@ -264,7 +264,7 @@ export default function AiAutomationClient() {
           </Reveal>
         </div>
         <div className="service-hero-visual">
-          <TiltImage src="/service-hero.png" alt="AppMotive Intelligent AI & Automation Systems" className="service-hero-img" />
+          <TiltImage src="/service-hero.webp" alt="AppMotive Intelligent AI & Automation Systems" className="service-hero-img" />
         </div>
       </section>
 
@@ -328,7 +328,7 @@ export default function AiAutomationClient() {
           <div className="landing-about-visual">
             <Reveal>
               <div style={{ position: 'relative' }}>
-                <TiltImage src="/about-us.png" alt="AppMotive AI Solution Engineers" className="landing-about-img" />
+                <TiltImage src="/about-us.webp" alt="AppMotive AI Solution Engineers" className="landing-about-img" />
                 <div className="about-floating-badge">
                   <span className="about-badge-num">80%+</span>
                   <div className="about-badge-text">

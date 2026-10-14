@@ -14,7 +14,7 @@ export default function Navbar() {
     <header style={{ width: '100%' }}>
       <nav className="nav" aria-label="Main Navigation">
         <Link className="brand" href="/" onClick={() => setMobileMenuOpen(false)} aria-label="AppMotive Technologies Homepage">
-          <img src="/web-logo.png" alt="AppMotive Technologies Logo" className="brand-logo" />
+          <img src="/web-logo.webp" alt="AppMotive Technologies Logo" className="brand-logo" />
           <div className="brand-text">
             <span className="brand-name">App<em>Motive</em><span>®</span></span>
             <span className="brand-sub">TECHNOLOGIES</span>

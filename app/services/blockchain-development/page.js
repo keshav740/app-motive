@@ -14,17 +14,17 @@ export const metadata = {
     'AppMotive Technologies Web3',
   ],
   alternates: {
-    canonical: 'https://appmotive.com/services/blockchain-development',
+    canonical: 'https://appmotivetechnologies.com/services/blockchain-development',
   },
   openGraph: {
     title: 'Blockchain Development Services — Smart Contracts & Web3 dApps | AppMotive',
     description:
       'Engineered for security, gas optimization, and scale. Build audited smart contracts, dApps, and Layer-2 protocols.',
-    url: 'https://appmotive.com/services/blockchain-development',
+    url: 'https://appmotivetechnologies.com/services/blockchain-development',
     siteName: 'AppMotive Technologies',
     images: [
       {
-        url: '/hero-home.png',
+        url: '/hero-home.webp',
         width: 1200,
         height: 630,
         alt: 'AppMotive Technologies Blockchain Development Services',
@@ -37,7 +37,7 @@ export const metadata = {
     title: 'Blockchain Development Services — Smart Contracts & Web3 dApps | AppMotive',
     description:
       'Engineered for security, gas optimization, and scale. Build audited smart contracts, dApps, and Layer-2 protocols.',
-    images: ['/hero-home.png'],
+    images: ['/hero-home.webp'],
   },
 };
 
@@ -49,7 +49,7 @@ const jsonLdBlockchainService = {
   provider: {
     '@type': 'Organization',
     name: 'AppMotive Technologies',
-    url: 'https://appmotive.com',
+    url: 'https://appmotivetechnologies.com',
   },
   areaServed: 'Worldwide',
   description:

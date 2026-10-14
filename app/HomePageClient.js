@@ -6,10 +6,10 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 const services = [
-  ['01', 'Website Development', 'High-performance, modern websites designed and engineered to turn visitors into loyal customers.', 'WEB DEV', '/project-1.jpg'],
-  ['02', 'Meta Ads (Facebook & Instagram)', 'Targeted ad campaigns on Facebook and Instagram engineered for maximum brand reach and lead generation.', 'META ADS', '/project-2.jpg'],
-  ['03', 'Google Ads', 'High-intent Search, Shopping, and Display campaigns designed to put your business first on Google.', 'GOOGLE ADS', '/project-3.jpg'],
-  ['04', 'Landing Pages', 'High-speed, custom landing pages optimized specifically to convert ad traffic into phone calls and bookings.', 'LANDING PAGES', '/service-hero.png'],
+  ['01', 'Website Development', 'High-performance, modern websites designed and engineered to turn visitors into loyal customers.', 'WEB DEV', '/project-1.webp'],
+  ['02', 'Meta Ads (Facebook & Instagram)', 'Targeted ad campaigns on Facebook and Instagram engineered for maximum brand reach and lead generation.', 'META ADS', '/project-2.webp'],
+  ['03', 'Google Ads', 'High-intent Search, Shopping, and Display campaigns designed to put your business first on Google.', 'GOOGLE ADS', '/project-3.webp'],
+  ['04', 'Landing Pages', 'High-speed, custom landing pages optimized specifically to convert ad traffic into phone calls and bookings.', 'LANDING PAGES', '/service-hero.webp'],
 ];
 
 const faqs = [
@@ -151,7 +151,7 @@ export default function HomePageClient() {
         </div>
 
         <div className="hero-visual">
-          <TiltImage src="/hero-home.png" alt="AppMotive Technologies Website & Digital Advertising" className="hero-home-img" />
+          <TiltImage src="/hero-home.webp" alt="AppMotive Technologies Website & Digital Advertising" className="hero-home-img" />
         </div>
       </section>
 
@@ -304,7 +304,7 @@ export default function HomePageClient() {
           </div>
 
           <div className="why-hero-visual">
-            <TiltImage src="/about-us.png" alt="AppMotive Technologies Engineering Team and Vision" className="about-hero-img" />
+            <TiltImage src="/about-us.webp" alt="AppMotive Technologies Engineering Team and Vision" className="about-hero-img" />
           </div>
         </div>
 
@@ -362,7 +362,7 @@ export default function HomePageClient() {
 
       <section id="contact" className="cta section-pad" aria-label="Call to Action">
         <div className="cta-grid" />
-        <div className="cta-logo"><img src="/appmotive-logo.png" alt="AppMotive Technologies Logo" /></div>
+        <div className="cta-logo"><img src="/appmotive-logo.webp" alt="AppMotive Technologies Logo" /></div>
         <Reveal>
           <span className="kicker">05 / LET’S BUILD</span>
           <h2>Have an idea?<br /><span>Let’s make it real.</span></h2>

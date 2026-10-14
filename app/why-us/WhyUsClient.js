@@ -110,7 +110,7 @@ export default function WhyUsClient() {
           <Reveal><p>We combine product strategy, intuitive UI design, and production engineering to turn high-ambition concepts into market-defining digital products.</p></Reveal>
         </div>
         <div className="why-hero-visual">
-          <TiltImage src="/why-us.png" alt="Why Choose AppMotive Technologies Engineering Agency" className="why-hero-img" />
+          <TiltImage src="/why-us.webp" alt="Why Choose AppMotive Technologies Engineering Agency" className="why-hero-img" />
         </div>
       </section>
 

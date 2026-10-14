@@ -241,7 +241,7 @@ export default function MarketingClient() {
       {/* Header */}
       <header className="landing-header">
         <Link className="brand" href="/" aria-label="AppMotive Technologies Homepage">
-          <img src="/web-logo.png" alt="AppMotive Technologies Logo" className="brand-logo" />
+          <img src="/web-logo.webp" alt="AppMotive Technologies Logo" className="brand-logo" />
           <div className="brand-text">
             <span className="brand-name" style={{ color: '#07101d' }}>
               App<em style={{ color: '#FBBC05', fontStyle: 'normal' }}>Motive</em><span style={{ color: '#07101d', fontSize: '0.7em', marginLeft: '2px' }}>®</span>
@@ -264,7 +264,7 @@ export default function MarketingClient() {
           </Reveal>
         </div>
         <div className="service-hero-visual">
-          <TiltImage src="/project-3.jpg" alt="AppMotive Performance Social Media Marketing" className="service-hero-img" />
+          <TiltImage src="/project-3.webp" alt="AppMotive Performance Social Media Marketing" className="service-hero-img" />
         </div>
       </section>
 
@@ -328,7 +328,7 @@ export default function MarketingClient() {
           <div className="landing-about-visual">
             <Reveal>
               <div style={{ position: 'relative' }}>
-                <TiltImage src="/why-us.png" alt="AppMotive Performance Growth Marketers" className="landing-about-img" />
+                <TiltImage src="/why-us.webp" alt="AppMotive Performance Growth Marketers" className="landing-about-img" />
                 <div className="about-floating-badge">
                   <span className="about-badge-num">3.5x+</span>
                   <div className="about-badge-text">

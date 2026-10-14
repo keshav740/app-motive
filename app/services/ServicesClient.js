@@ -228,7 +228,7 @@ export default function ServicesClient() {
           <Reveal><p>From initial strategy and user interface design to production engineering and AI automation, we cover the full product spectrum.</p></Reveal>
         </div>
         <div className="service-hero-visual">
-          <TiltImage src="/service-hero.png" alt="AppMotive Technologies 9 Core Engineering Capabilities" className="service-hero-img" />
+          <TiltImage src="/service-hero.webp" alt="AppMotive Technologies 9 Core Engineering Capabilities" className="service-hero-img" />
         </div>
       </section>
 

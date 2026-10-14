@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="footer-brand">
-        <img src="/web-logo.png" alt="AppMotive Technologies" className="footer-logo" />
+        <img src="/web-logo.webp" alt="AppMotive Technologies" className="footer-logo" />
         <span>App<span style={{ color: 'var(--blue)' }}>Motive</span> Technologies</span>
       </div>
       <div className="footer-links">

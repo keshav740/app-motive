@@ -241,7 +241,7 @@ export default function DigitalCommerceClient() {
       {/* Header */}
       <header className="landing-header">
         <Link className="brand" href="/" aria-label="AppMotive Technologies Homepage">
-          <img src="/web-logo.png" alt="AppMotive Technologies Logo" className="brand-logo" />
+          <img src="/web-logo.webp" alt="AppMotive Technologies Logo" className="brand-logo" />
           <div className="brand-text">
             <span className="brand-name" style={{ color: '#07101d' }}>
               App<em style={{ color: '#FBBC05', fontStyle: 'normal' }}>Motive</em><span style={{ color: '#07101d', fontSize: '0.7em', marginLeft: '2px' }}>®</span>
@@ -264,7 +264,7 @@ export default function DigitalCommerceClient() {
           </Reveal>
         </div>
         <div className="service-hero-visual">
-          <TiltImage src="/project-2.jpg" alt="AppMotive High-Speed Digital Commerce Platforms" className="service-hero-img" />
+          <TiltImage src="/project-2.webp" alt="AppMotive High-Speed Digital Commerce Platforms" className="service-hero-img" />
         </div>
       </section>
 
@@ -328,7 +328,7 @@ export default function DigitalCommerceClient() {
           <div className="landing-about-visual">
             <Reveal>
               <div style={{ position: 'relative' }}>
-                <TiltImage src="/service-hero.png" alt="AppMotive E-Commerce Engineering Team" className="landing-about-img" />
+                <TiltImage src="/service-hero.webp" alt="AppMotive E-Commerce Engineering Team" className="landing-about-img" />
                 <div className="about-floating-badge">
                   <span className="about-badge-num">99+</span>
                   <div className="about-badge-text">

@@ -5,17 +5,17 @@ export const metadata = {
   description:
     'We build websites and run Facebook, Instagram, and Google ads for small businesses to help them get more customers and grow.',
   alternates: {
-    canonical: 'https://appmotive.com',
+    canonical: 'https://appmotivetechnologies.com',
   },
   openGraph: {
     title: 'Get More Customers with a Better Website & Smarter Advertising — AppMotive',
     description:
       'We build websites and run Facebook, Instagram, and Google ads for small businesses.',
-    url: 'https://appmotive.com',
+    url: 'https://appmotivetechnologies.com',
     siteName: 'AppMotive Technologies',
     images: [
       {
-        url: '/hero-home.png',
+        url: '/hero-home.webp',
         width: 1200,
         height: 630,
         alt: 'AppMotive Technologies Website & Digital Advertising',
@@ -28,7 +28,7 @@ export const metadata = {
     title: 'Get More Customers with a Better Website & Smarter Advertising — AppMotive',
     description:
       'We build websites and run Facebook, Instagram, and Google ads for small businesses.',
-    images: ['/hero-home.png'],
+    images: ['/hero-home.webp'],
   },
 };
 
@@ -83,9 +83,9 @@ const jsonLdServiceAgency = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'AppMotive Technologies',
-  url: 'https://appmotive.com',
-  logo: 'https://appmotive.com/web-logo.png',
-  image: 'https://appmotive.com/hero-home.png',
+  url: 'https://appmotivetechnologies.com',
+  logo: 'https://appmotivetechnologies.com/web-logo.png',
+  image: 'https://appmotivetechnologies.com/hero-home.webp',
   description:
     'Full-service digital product engineering agency building web apps, mobile solutions, AI workflows, and cloud architecture.',
   address: {

@@ -94,7 +94,7 @@ export default function AboutClient() {
           <Reveal><p>AppMotive Technologies is a product engineering agency dedicated to crafting sleek, high-impact web apps, mobile products, and AI workflows for ambitious brands worldwide.</p></Reveal>
         </div>
         <div className="about-hero-visual">
-          <TiltImage src="/about-us.png" alt="About AppMotive Technologies Team & Engineering Culture" className="about-hero-img" />
+          <TiltImage src="/about-us.webp" alt="About AppMotive Technologies Team & Engineering Culture" className="about-hero-img" />
         </div>
       </section>
 

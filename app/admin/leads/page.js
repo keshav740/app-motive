@@ -169,7 +169,7 @@ export default function AdminLeadsPage() {
       <div style={styles.authWrapper}>
         <div style={styles.authCard}>
           <div style={styles.authLogo}>
-            <img src="/web-logo.png" alt="AppMotive" style={{ width: '42px', height: '42px' }} />
+            <img src="/web-logo.webp" alt="AppMotive" style={{ width: '42px', height: '42px' }} />
             <span style={{ fontSize: '1.4rem', fontWeight: '700', color: '#fff', marginLeft: '12px' }}>
               App<span style={{ color: '#4285F4' }}>Motive</span> Technologies Admin
             </span>
@@ -213,7 +213,7 @@ export default function AdminLeadsPage() {
     <div style={styles.dashboardWrapper}>
       <header style={styles.dashboardHeader}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <img src="/web-logo.png" alt="AppMotive" style={{ width: '36px', height: '36px' }} />
+          <img src="/web-logo.webp" alt="AppMotive" style={{ width: '36px', height: '36px' }} />
           <div>
             <h1 style={{ fontSize: '1.2rem', color: '#fff', margin: 0, fontWeight: 700 }}>
               AppMotive <em>Leads Engine</em>

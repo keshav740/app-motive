@@ -124,7 +124,7 @@ export default function ContactClient() {
           <Reveal><p>Tell us about your project, timeline, and vision. We’ll review your details and get back to you within 24 hours with a tailored proposal.</p></Reveal>
         </div>
         <div className="contact-hero-visual">
-          <TiltImage src="/contact-us.png" alt="Get In Touch with AppMotive Technologies Team" className="contact-hero-img" />
+          <TiltImage src="/contact-us.webp" alt="Get In Touch with AppMotive Technologies Team" className="contact-hero-img" />
         </div>
       </section>
 

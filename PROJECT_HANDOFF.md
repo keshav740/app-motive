@@ -17,8 +17,8 @@ The site is designed with a sleek Google-inspired color palette (`#4285F4`, `#34
 ## ✅ Completed Features & Recent Work Summary
 
 ### 1. 🖼️ Universal Branding & Logo Integration
-- **Navbar & Footer**: Updated logo asset to `/web-logo.png` with smooth scale & rotate hover transitions.
-- **Universal Favicon / App Icon**: Configured `web-logo.png` across all operating systems & devices:
+- **Navbar & Footer**: Updated logo asset to `/web-logo.webp` with smooth scale & rotate hover transitions.
+- **Universal Favicon / App Icon**: Configured `web-logo.webp` across all operating systems & devices:
   - Apple iOS / macOS (`apple-touch-icon`, `apple-touch-icon-precomposed`, `app/apple-icon.png`)
   - Android Chrome (`app/icon.png` 192x192 / 512x512)
   - Windows Start Tiles (`msapplication-TileImage`)
@@ -49,11 +49,11 @@ The site is designed with a sleek Google-inspired color palette (`#4285F4`, `#34
 - **Homepage (`/`)**: Displays the 5 main featured core services.
 
 ### 5. 🎨 3D Section Illustrations Used Across Routes
-- 🏠 **Home Page (`/`)**: `hero-home.png` (Tilt Image) & `why-us.png` (#about section)
-- 🛠️ **Services Page (`/services`)**: `service-hero.png` (Side-by-side desktop hero + Tilt)
-- 💡 **Why Us Page (`/why-us`)**: `why-us.png` (Side-by-side desktop hero + Tilt)
-- 👥 **About Us Page (`/about`)**: `about-us.png` (Side-by-side desktop hero + Tilt)
-- 📞 **Contact Page (`/contact`)**: `contact-us.png` (Side-by-side desktop hero + Tilt)
+- 🏠 **Home Page (`/`)**: `hero-home.webp` (Tilt Image) & `why-us.webp` (#about section)
+- 🛠️ **Services Page (`/services`)**: `service-hero.webp` (Side-by-side desktop hero + Tilt)
+- 💡 **Why Us Page (`/why-us`)**: `why-us.webp` (Side-by-side desktop hero + Tilt)
+- 👥 **About Us Page (`/about`)**: `about-us.webp` (Side-by-side desktop hero + Tilt)
+- 📞 **Contact Page (`/contact`)**: `contact-us.webp` (Side-by-side desktop hero + Tilt)
 
 ### 6. ✨ Global UI Animations & FX
 - **Top Scroll Progress Bar**: Gradient bar tracking scroll position (`.scroll-progress`).

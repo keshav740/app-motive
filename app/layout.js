@@ -42,7 +42,7 @@ export const metadata = {
       'Engineered for speed, clarity and conversion. We build custom web apps, mobile products, AI workflows, and digital commerce.',
     images: [
       {
-        url: '/hero-home.png',
+        url: '/hero-home.webp',
         width: 1200,
         height: 630,
         alt: 'AppMotive Technologies Digital Product Engineering',
@@ -54,25 +54,19 @@ export const metadata = {
     title: 'AppMotive Technologies — Digital Product Engineering Agency',
     description:
       'We build high-performance web apps, mobile products, AI workflows, and digital commerce for ambitious companies.',
-    images: ['/hero-home.png'],
+    images: ['/hero-home.webp'],
   },
   icons: {
     icon: [
-      { url: '/web-logo.png', type: 'image/png' },
-      { url: '/web-logo.png', sizes: '32x32', type: 'image/png' },
-      { url: '/web-logo.png', sizes: '192x192', type: 'image/png' },
-      { url: '/web-logo.png', sizes: '512x512', type: 'image/png' },
+      { url: '/favicon.ico', sizes: '48x48' },
+      { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/icon-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512x512.png', sizes: '512x512', type: 'image/png' },
     ],
-    shortcut: '/web-logo.png',
+    shortcut: '/favicon.ico',
     apple: [
-      { url: '/web-logo.png' },
-      { url: '/web-logo.png', sizes: '180x180', type: 'image/png' },
-    ],
-    other: [
-      {
-        rel: 'apple-touch-icon-precomposed',
-        url: '/web-logo.png',
-      },
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
     ],
   },
 };
@@ -114,11 +108,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/web-logo.png" type="image/png" sizes="any" />
-        <link rel="shortcut icon" href="/web-logo.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/web-logo.png" sizes="180x180" />
-        <link rel="apple-touch-icon-precomposed" href="/web-logo.png" />
-        <meta name="msapplication-TileImage" content="/web-logo.png" />
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
+        <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48" />
+        <link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96" />
+        <link rel="icon" href="/icon-192x192.png" type="image/png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <meta name="msapplication-TileImage" content="/icon-192x192.png" />
         <meta name="msapplication-TileColor" content="#07101d" />
         <meta name="theme-color" content="#ffffff" />
         <script
