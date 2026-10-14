@@ -69,6 +69,9 @@ export const metadata = {
       { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
     ],
   },
+  verification: {
+    google: 'Q1ESQbbvSS6U7M8a1wogX3weTgBuUXN6OC74cKgWM6c',
+  },
 };
 
 const jsonLdOrganization = {
@@ -114,6 +117,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/icon-192x192.png" type="image/png" sizes="192x192" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
         <link rel="shortcut icon" href="/favicon.ico" />
+        <meta name="google-site-verification" content="Q1ESQbbvSS6U7M8a1wogX3weTgBuUXN6OC74cKgWM6c" />
         <meta name="msapplication-TileImage" content="/icon-192x192.png" />
         <meta name="msapplication-TileColor" content="#07101d" />
         <meta name="theme-color" content="#ffffff" />
