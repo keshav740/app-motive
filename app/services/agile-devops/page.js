@@ -14,13 +14,13 @@ export const metadata = {
     'AppMotive Technologies DevOps',
   ],
   alternates: {
-    canonical: 'https://appmotivetechnologies.com/services/agile-devops',
+    canonical: 'https://www.appmotivetechnologies.com/services/agile-devops',
   },
   openGraph: {
     title: 'Agile & DevOps Infrastructure Services | AppMotive Technologies',
     description:
       'Engineered for rapid deployment cycles, zero downtime releases, and bulletproof infrastructure automation.',
-    url: 'https://appmotivetechnologies.com/services/agile-devops',
+    url: 'https://www.appmotivetechnologies.com/services/agile-devops',
     siteName: 'AppMotive Technologies',
     images: [
       {
@@ -49,7 +49,7 @@ const jsonLdDevOpsService = {
   provider: {
     '@type': 'Organization',
     name: 'AppMotive Technologies',
-    url: 'https://appmotivetechnologies.com',
+    url: 'https://www.appmotivetechnologies.com',
   },
   areaServed: 'Worldwide',
   description:

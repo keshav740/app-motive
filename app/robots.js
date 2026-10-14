@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://appmotivetechnologies.com/sitemap.xml',
+    sitemap: 'https://www.appmotivetechnologies.com/sitemap.xml',
   };
 }

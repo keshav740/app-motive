@@ -5,13 +5,13 @@ export const metadata = {
   description:
     'Explore AppMotive Technologies digital capabilities: Website Development, Mobile App Engineering, AI Automation, E-Commerce, DevOps, and Cloud Services.',
   alternates: {
-    canonical: 'https://appmotivetechnologies.com/services',
+    canonical: 'https://www.appmotivetechnologies.com/services',
   },
   openGraph: {
     title: 'Digital Engineering Services — Web, Mobile, AI & Cloud | AppMotive',
     description:
       'Explore AppMotive Technologies digital capabilities: Web Development, Mobile Engineering, AI Automation, Digital Commerce, and Cloud Services.',
-    url: 'https://appmotivetechnologies.com/services',
+    url: 'https://www.appmotivetechnologies.com/services',
     siteName: 'AppMotive Technologies',
     images: [
       {

@@ -14,13 +14,13 @@ export const metadata = {
     'AppMotive Technologies Enterprise Solutions',
   ],
   alternates: {
-    canonical: 'https://appmotivetechnologies.com/services/business-application',
+    canonical: 'https://www.appmotivetechnologies.com/services/business-application',
   },
   openGraph: {
     title: 'Business Application & Enterprise Software Development | AppMotive',
     description:
       'Engineered for security, scalability, and operational efficiency. Build custom internal tools, admin portals, and CRM/ERP systems.',
-    url: 'https://appmotivetechnologies.com/services/business-application',
+    url: 'https://www.appmotivetechnologies.com/services/business-application',
     siteName: 'AppMotive Technologies',
     images: [
       {
@@ -49,7 +49,7 @@ const jsonLdBusinessService = {
   provider: {
     '@type': 'Organization',
     name: 'AppMotive Technologies',
-    url: 'https://appmotivetechnologies.com',
+    url: 'https://www.appmotivetechnologies.com',
   },
   areaServed: 'Worldwide',
   description:

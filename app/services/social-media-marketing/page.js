@@ -14,13 +14,13 @@ export const metadata = {
     'AppMotive Technologies Growth Services',
   ],
   alternates: {
-    canonical: 'https://appmotivetechnologies.com/services/social-media-marketing',
+    canonical: 'https://www.appmotivetechnologies.com/services/social-media-marketing',
   },
   openGraph: {
     title: 'Social Media Marketing & Growth Services — Digital Brand Strategy | AppMotive',
     description:
       'Data-backed growth campaigns engineered to lower CAC and maximize ROAS across Meta, Google, LinkedIn, and TikTok.',
-    url: 'https://appmotivetechnologies.com/services/social-media-marketing',
+    url: 'https://www.appmotivetechnologies.com/services/social-media-marketing',
     siteName: 'AppMotive Technologies',
     images: [
       {
@@ -49,7 +49,7 @@ const jsonLdMarketingService = {
   provider: {
     '@type': 'Organization',
     name: 'AppMotive Technologies',
-    url: 'https://appmotivetechnologies.com',
+    url: 'https://www.appmotivetechnologies.com',
   },
   areaServed: 'Worldwide',
   description:

@@ -1,7 +1,7 @@
 import './globals.css';
 
 export const metadata = {
-  metadataBase: new URL('https://appmotivetechnologies.com'),
+  metadataBase: new URL('https://www.appmotivetechnologies.com'),
   title: {
     default: 'AppMotive Technologies — Digital Product Engineering Agency',
     template: '%s | AppMotive Technologies',
@@ -18,7 +18,7 @@ export const metadata = {
     'Cloud Architecture & DevOps',
     'AppMotive Technologies',
   ],
-  authors: [{ name: 'AppMotive Technologies', url: 'https://appmotivetechnologies.com' }],
+  authors: [{ name: 'AppMotive Technologies', url: 'https://www.appmotivetechnologies.com' }],
   creator: 'AppMotive Technologies',
   publisher: 'AppMotive Technologies',
   robots: {
@@ -35,7 +35,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://appmotivetechnologies.com',
+    url: 'https://www.appmotivetechnologies.com',
     siteName: 'AppMotive Technologies',
     title: 'AppMotive Technologies — Digital Product Engineering Agency',
     description:
@@ -78,8 +78,8 @@ const jsonLdOrganization = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'AppMotive Technologies',
-  url: 'https://appmotivetechnologies.com',
-  logo: 'https://appmotivetechnologies.com/web-logo.png',
+  url: 'https://www.appmotivetechnologies.com',
+  logo: 'https://www.appmotivetechnologies.com/web-logo.png',
   description:
     'AppMotive Technologies is a digital product engineering agency specializing in Web Development, Mobile Apps, AI & Automation, and Cloud Infrastructure.',
   contactPoint: {
@@ -99,11 +99,11 @@ const jsonLdWebSite = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'AppMotive Technologies',
-  url: 'https://appmotivetechnologies.com',
+  url: 'https://www.appmotivetechnologies.com',
   publisher: {
     '@type': 'Organization',
     name: 'AppMotive Technologies',
-    logo: 'https://appmotivetechnologies.com/web-logo.png',
+    logo: 'https://www.appmotivetechnologies.com/web-logo.png',
   },
 };
 

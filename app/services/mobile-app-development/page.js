@@ -14,13 +14,13 @@ export const metadata = {
     'AppMotive Technologies Mobile Apps',
   ],
   alternates: {
-    canonical: 'https://appmotivetechnologies.com/services/mobile-app-development',
+    canonical: 'https://www.appmotivetechnologies.com/services/mobile-app-development',
   },
   openGraph: {
     title: 'Mobile Application Development Services — iOS & Android Native Apps | AppMotive',
     description:
       'Engineered for 60fps performance, intuitive user experience, and seamless offline functionality. Build cross-platform iOS and Android apps with AppMotive.',
-    url: 'https://appmotivetechnologies.com/services/mobile-app-development',
+    url: 'https://www.appmotivetechnologies.com/services/mobile-app-development',
     siteName: 'AppMotive Technologies',
     images: [
       {
@@ -49,7 +49,7 @@ const jsonLdMobileDevService = {
   provider: {
     '@type': 'Organization',
     name: 'AppMotive Technologies',
-    url: 'https://appmotivetechnologies.com',
+    url: 'https://www.appmotivetechnologies.com',
   },
   areaServed: 'Worldwide',
   description:

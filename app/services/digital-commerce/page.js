@@ -14,13 +14,13 @@ export const metadata = {
     'AppMotive Technologies Digital Commerce',
   ],
   alternates: {
-    canonical: 'https://appmotivetechnologies.com/services/digital-commerce',
+    canonical: 'https://www.appmotivetechnologies.com/services/digital-commerce',
   },
   openGraph: {
     title: 'Digital Commerce & Headless E-Commerce Services | AppMotive',
     description:
       'Engineered for maximum conversion rates, sub-second load times, and global payment processing.',
-    url: 'https://appmotivetechnologies.com/services/digital-commerce',
+    url: 'https://www.appmotivetechnologies.com/services/digital-commerce',
     siteName: 'AppMotive Technologies',
     images: [
       {
@@ -49,7 +49,7 @@ const jsonLdCommerceService = {
   provider: {
     '@type': 'Organization',
     name: 'AppMotive Technologies',
-    url: 'https://appmotivetechnologies.com',
+    url: 'https://www.appmotivetechnologies.com',
   },
   areaServed: 'Worldwide',
   description:

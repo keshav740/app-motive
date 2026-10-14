@@ -14,13 +14,13 @@ export const metadata = {
     'AppMotive Technologies Cloud Services',
   ],
   alternates: {
-    canonical: 'https://appmotivetechnologies.com/services/cloud-services',
+    canonical: 'https://www.appmotivetechnologies.com/services/cloud-services',
   },
   openGraph: {
     title: 'Cloud Services & AWS/GCP Cloud Architecture | AppMotive Technologies',
     description:
       'Engineered for 99.99% uptime, auto-scaling elasticity, and cloud security compliance across AWS, GCP, and Azure.',
-    url: 'https://appmotivetechnologies.com/services/cloud-services',
+    url: 'https://www.appmotivetechnologies.com/services/cloud-services',
     siteName: 'AppMotive Technologies',
     images: [
       {
@@ -49,7 +49,7 @@ const jsonLdCloudService = {
   provider: {
     '@type': 'Organization',
     name: 'AppMotive Technologies',
-    url: 'https://appmotivetechnologies.com',
+    url: 'https://www.appmotivetechnologies.com',
   },
   areaServed: 'Worldwide',
   description:

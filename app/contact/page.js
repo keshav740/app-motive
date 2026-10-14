@@ -5,13 +5,13 @@ export const metadata = {
   description:
     'Have an idea for a web app, mobile product, or AI automation? Contact AppMotive Technologies today for a tailored proposal within 24 hours.',
   alternates: {
-    canonical: 'https://appmotivetechnologies.com/contact',
+    canonical: 'https://www.appmotivetechnologies.com/contact',
   },
   openGraph: {
     title: 'Contact AppMotive Technologies — Start Your Digital Project',
     description:
       'Reach out to our senior digital product engineering team. We guarantee a response within 24 business hours.',
-    url: 'https://appmotivetechnologies.com/contact',
+    url: 'https://www.appmotivetechnologies.com/contact',
     siteName: 'AppMotive Technologies',
     images: [
       {
@@ -36,14 +36,14 @@ const jsonLdContact = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
   name: 'Contact AppMotive Technologies',
-  url: 'https://appmotivetechnologies.com/contact',
+  url: 'https://www.appmotivetechnologies.com/contact',
   description:
     'Contact form and communication channels for project inquiries with AppMotive Technologies engineering team.',
   mainEntity: {
     '@type': 'Organization',
     name: 'AppMotive Technologies',
     email: 'hello@appmotive.com',
-    url: 'https://appmotivetechnologies.com',
+    url: 'https://www.appmotivetechnologies.com',
   },
 };
 

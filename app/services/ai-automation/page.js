@@ -14,13 +14,13 @@ export const metadata = {
     'AppMotive Technologies AI Solutions',
   ],
   alternates: {
-    canonical: 'https://appmotivetechnologies.com/services/ai-automation',
+    canonical: 'https://www.appmotivetechnologies.com/services/ai-automation',
   },
   openGraph: {
     title: 'AI & Automation Services — Custom LLM Agents & Workflows | AppMotive',
     description:
       'Turn repetitive manual tasks into autonomous AI pipelines powered by OpenAI, Claude, LangChain, and vector databases.',
-    url: 'https://appmotivetechnologies.com/services/ai-automation',
+    url: 'https://www.appmotivetechnologies.com/services/ai-automation',
     siteName: 'AppMotive Technologies',
     images: [
       {
@@ -49,7 +49,7 @@ const jsonLdAiService = {
   provider: {
     '@type': 'Organization',
     name: 'AppMotive Technologies',
-    url: 'https://appmotivetechnologies.com',
+    url: 'https://www.appmotivetechnologies.com',
   },
   areaServed: 'Worldwide',
   description:

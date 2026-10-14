@@ -14,13 +14,13 @@ export const metadata = {
     'AppMotive Technologies Web Development',
   ],
   alternates: {
-    canonical: 'https://appmotivetechnologies.com/services/web-development',
+    canonical: 'https://www.appmotivetechnologies.com/services/web-development',
   },
   openGraph: {
     title: 'Custom Web Development Services — High-Performance Next.js Web Apps | AppMotive',
     description:
       'Engineered for speed, SEO, and business conversion. Discover our Next.js web application architecture, Core Web Vitals optimization, and headless CMS solutions.',
-    url: 'https://appmotivetechnologies.com/services/web-development',
+    url: 'https://www.appmotivetechnologies.com/services/web-development',
     siteName: 'AppMotive Technologies',
     images: [
       {
@@ -49,7 +49,7 @@ const jsonLdWebDevService = {
   provider: {
     '@type': 'Organization',
     name: 'AppMotive Technologies',
-    url: 'https://appmotivetechnologies.com',
+    url: 'https://www.appmotivetechnologies.com',
   },
   areaServed: 'Worldwide',
   description:

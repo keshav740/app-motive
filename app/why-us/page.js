@@ -5,13 +5,13 @@ export const metadata = {
   description:
     'Discover why ambitious startups and enterprises choose AppMotive Technologies for digital product design, senior engineering access, and rapid delivery.',
   alternates: {
-    canonical: 'https://appmotivetechnologies.com/why-us',
+    canonical: 'https://www.appmotivetechnologies.com/why-us',
   },
   openGraph: {
     title: 'Why Choose AppMotive Technologies — Engineering Excellence & Strategy',
     description:
       'Product thinking meets senior engineering execution. Discover our 4 pillars, rapid production workflows, and proven track record.',
-    url: 'https://appmotivetechnologies.com/why-us',
+    url: 'https://www.appmotivetechnologies.com/why-us',
     siteName: 'AppMotive Technologies',
     images: [
       {
