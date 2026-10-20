@@ -138,13 +138,13 @@ export default function RootLayout({ children }) {
         {children}
         <Chatbot />
         <ScrollToTop />
-        {/* Google tag (gtag.js) */}
+        {/* Google tag (gtag.js) - Analytics & Google Ads */}
         <Script
           strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-YKLZTB7C72"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18507242756"
         />
         <Script
-          id="google-analytics"
+          id="google-tags"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
@@ -152,6 +152,7 @@ export default function RootLayout({ children }) {
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-YKLZTB7C72');
+              gtag('config', 'AW-18507242756');
             `,
           }}
         />
