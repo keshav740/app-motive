@@ -141,7 +141,7 @@ export default function RootLayout({ children }) {
         {/* Google tag (gtag.js) - Analytics & Google Ads */}
         <Script
           strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18507242756"
+          src="https://www.googletagmanager.com/gtag/js?id=G-YKLZTB7C72"
         />
         <Script
           id="google-tags"
