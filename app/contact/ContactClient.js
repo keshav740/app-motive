@@ -51,8 +51,10 @@ export default function ContactClient() {
     name: '',
     email: '',
     phone: '',
-    message: ''
+    message: '',
+    hp_company_website: '',
   });
+  const [formLoadedAt, setFormLoadedAt] = useState(Date.now());
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
@@ -92,7 +94,10 @@ export default function ContactClient() {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          _formLoadedAt: formLoadedAt,
+        }),
       });
 
       const data = await res.json();
@@ -187,6 +192,20 @@ export default function ContactClient() {
                     ⚠️ {errorMsg}
                   </div>
                 )}
+
+                {/* Honeypot Anti-Bot Field (Hidden from real users, trapped by bots) */}
+                <div style={{ display: 'none', position: 'absolute', left: '-9999px', opacity: 0 }} aria-hidden="true">
+                  <label htmlFor="hp_company_website">Do not fill this field</label>
+                  <input
+                    id="hp_company_website"
+                    type="text"
+                    name="hp_company_website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={formData.hp_company_website || ''}
+                    onChange={(e) => setFormData({ ...formData, hp_company_website: e.target.value })}
+                  />
+                </div>
 
                 <div className="form-group">
                   <label htmlFor="name">Your Name *</label>

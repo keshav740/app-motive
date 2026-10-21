@@ -310,8 +310,10 @@ export default function LandingClient() {
     phone: '',
     service: 'Website Development',
     budget: '$5,000 - $10,000',
-    message: ''
+    message: '',
+    hp_website: '',
   });
+  const [formLoadedAt] = useState(Date.now());
 
   const handleSelectQuote = (serviceTitle) => {
     setFormData((prev) => ({ ...prev, service: serviceTitle }));
@@ -342,6 +344,7 @@ export default function LandingClient() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...formData,
+          _formLoadedAt: formLoadedAt,
           serviceCategory: 'All-in-One Common Landing Page'
         })
       });
@@ -624,6 +627,20 @@ export default function LandingClient() {
                     ⚠️ {errorMsg}
                   </div>
                 )}
+
+                {/* Honeypot field (invisible to humans, trapped by spam bots) */}
+                <div style={{ display: 'none', position: 'absolute', left: '-9999px', opacity: 0 }} aria-hidden="true">
+                  <label htmlFor="landing_hp_website">Do not fill this field</label>
+                  <input
+                    id="landing_hp_website"
+                    type="text"
+                    name="hp_website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={formData.hp_website || ''}
+                    onChange={(e) => setFormData({ ...formData, hp_website: e.target.value })}
+                  />
+                </div>
 
                 <div>
                   <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: '#07101d', marginBottom: '4px' }}>

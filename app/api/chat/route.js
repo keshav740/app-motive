@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getMongoClient, saveLocalLead } from '../../../lib/db';
+import { validatePhone, validateEmail, checkSpamKeywords } from '../../../lib/leadValidator';
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
@@ -56,17 +57,25 @@ function extractLeadInfo(text) {
 }
 
 async function recordLeadIfDetected(userMessage, conversationHistory = []) {
+  if (checkSpamKeywords(userMessage)) {
+    return false;
+  }
+
   const { email, phone } = extractLeadInfo(userMessage);
 
-  if (email || phone) {
+  const validPhone = phone && validatePhone(phone).valid ? phone : null;
+  const validEmail = email && validateEmail(email).valid ? email : null;
+
+  if (validEmail || validPhone) {
     const leadData = {
       name: 'Website Chatbot Visitor',
-      email: email || 'Not provided in chat',
-      phone: phone || 'Not provided in chat',
+      email: validEmail || 'Not provided in chat',
+      phone: validPhone || 'Not provided in chat',
       service: 'Inquiry via AI Chatbot',
       message: `Full Chat Context:\n${userMessage}`,
       status: 'New',
       source: 'MotiveAI Chatbot',
+      verifiedQuality: true,
       createdAt: new Date().toISOString(),
     };
 
