@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 export default function Footer() {
   return (
     <footer>
@@ -8,13 +6,9 @@ export default function Footer() {
         <span>App<span style={{ color: 'var(--blue)' }}>Motive</span> Technologies</span>
       </div>
       <div className="footer-links">
-        <Link href="/services">Services</Link>
-        <Link href="/why-us">Why Us</Link>
-        <Link href="/about">About</Link>
-        <Link href="/blog">Blog</Link>
-        <Link href="/contact">Contact</Link>
         <a href="mailto:info@appmotivetechnologies.com">info@appmotivetechnologies.com</a>
         <a href="tel:+919837033948">+91 9837033948</a>
+        <a href="tel:+919953286867">+91 9953286867</a>
       </div>
       <div className="copyright">© 2026 AppMotive Technologies. All rights reserved.</div>
     </footer>

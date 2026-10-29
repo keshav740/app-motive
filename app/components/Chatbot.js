@@ -78,7 +78,7 @@ export default function Chatbot() {
             role: 'assistant',
             content:
               data.reply ||
-              "I'm here to assist! Reach our engineering team at info@appmotivetechnologies.com or +91 9837033948.",
+              "I'm here to assist! Reach our engineering team at info@appmotivetechnologies.com or call/WhatsApp +91 9837033948 / +91 9953286867.",
           },
         ]);
       }
@@ -88,7 +88,7 @@ export default function Chatbot() {
         {
           role: 'assistant',
           content:
-            "I'm experiencing a brief network hiccup, but our senior engineers are ready to help! You can reach us directly at info@appmotivetechnologies.com or call +91 9837033948.",
+            "I'm experiencing a brief network hiccup, but our senior engineers are ready to help! You can reach us directly at info@appmotivetechnologies.com or call/WhatsApp +91 9837033948 / +91 9953286867.",
         },
       ]);
     } finally {
@@ -418,7 +418,7 @@ export default function Chatbot() {
           {/* WhatsApp Direct Option */}
           <div
             style={{
-              padding: '6px 16px',
+              padding: '6px 14px',
               background: '#0a1424',
               borderTop: '1px solid #182436',
               display: 'flex',
@@ -426,24 +426,46 @@ export default function Chatbot() {
               justifyContent: 'space-between',
               fontSize: '0.74rem',
               color: '#8fa0b5',
+              flexWrap: 'wrap',
+              gap: '6px',
             }}
           >
             <span>Need human engineer?</span>
-            <a
-              href="https://wa.me/919837033948?text=Hello%20AppMotive%20Technologies%2C%20I%20am%20interested%20in%20discussing%20a%20project."
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                color: '#25D366',
-                textDecoration: 'none',
-                fontWeight: 600,
-                display: 'flex',
-                alignItems: 'center',
-                gap: '4px',
-              }}
-            >
-              <span>💬</span> WhatsApp Direct ↗
-            </a>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+              <a
+                href="https://wa.me/919837033948?text=Hello%20AppMotive%20Technologies%2C%20I%20am%20interested%20in%20discussing%20a%20project."
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Chat on WhatsApp (+91 9837033948)"
+                style={{
+                  color: '#25D366',
+                  textDecoration: 'none',
+                  fontWeight: 600,
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '3px',
+                }}
+              >
+                <span>💬</span> WhatsApp 1 ↗
+              </a>
+              <span style={{ color: '#334155' }}>|</span>
+              <a
+                href="https://wa.me/919953286867?text=Hello%20AppMotive%20Technologies%2C%20I%20am%20interested%20in%20discussing%20a%20project."
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Chat on WhatsApp (+91 9953286867)"
+                style={{
+                  color: '#25D366',
+                  textDecoration: 'none',
+                  fontWeight: 600,
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '3px',
+                }}
+              >
+                <span>💬</span> WhatsApp 2 ↗
+              </a>
+            </div>
           </div>
 
           {/* Input Form */}

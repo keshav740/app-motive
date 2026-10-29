@@ -43,7 +43,7 @@ const jsonLdContact = {
     '@type': 'Organization',
     name: 'AppMotive Technologies',
     email: 'info@appmotivetechnologies.com',
-    telephone: '+91-9837033948',
+    telephone: ['+91-9837033948', '+91-9953286867'],
     url: 'https://www.appmotivetechnologies.com',
   },
 };

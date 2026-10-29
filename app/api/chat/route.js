@@ -29,7 +29,7 @@ AppMotive Key Details:
   - Clients retain 100% intellectual property (IP) and source code ownership upon completion. Standard NDAs signed prior to kickoff.
 - Official Contact Info:
   - Email: info@appmotivetechnologies.com
-  - Phone: +91 9837033948
+  - Phone / WhatsApp: +91 9837033948, +91 9953286867
   - Official Website: https://www.appmotivetechnologies.com
 
 Guidelines:
@@ -162,7 +162,7 @@ export async function POST(request) {
 
     if (!success || !reply) {
       reply =
-        "Thank you for reaching out to AppMotive Technologies! We specialize in custom web development, mobile applications, cloud engineering, and AI automation. Would you like to share your project idea or schedule a free call with our senior architects at info@appmotivetechnologies.com or +91 9837033948?";
+        "Thank you for reaching out to AppMotive Technologies! We specialize in custom web development, mobile applications, cloud engineering, and AI automation. Would you like to share your project idea or schedule a free call with our senior architects at info@appmotivetechnologies.com or +91 9837033948 / +91 9953286867?";
     }
 
     return NextResponse.json({

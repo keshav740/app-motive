@@ -593,9 +593,32 @@ export default function LandingClient() {
                 <a href="mailto:info@appmotivetechnologies.com" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#07101d', fontSize: '0.86rem', textDecoration: 'none', fontWeight: 600 }}>
                   <span style={{ color: '#4285F4' }}>✉</span> info@appmotivetechnologies.com
                 </a>
-                <a href="tel:+919837033948" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#07101d', fontSize: '0.86rem', textDecoration: 'none', fontWeight: 600 }}>
-                  <span style={{ color: '#34A853' }}>📞</span> +91 9837033948 (Call / WhatsApp)
-                </a>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                  <a href="tel:+919837033948" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#07101d', fontSize: '0.86rem', textDecoration: 'none', fontWeight: 600 }}>
+                    <span style={{ color: '#34A853' }}>📞</span> +91 9837033948
+                  </a>
+                  <a
+                    href="https://wa.me/919837033948?text=Hello%20AppMotive%20Technologies%2C%20I%20am%20interested%20in%20discussing%20a%20project."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: '#25D366', fontSize: '0.82rem', fontWeight: 600, textDecoration: 'none' }}
+                  >
+                    (WhatsApp ↗)
+                  </a>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                  <a href="tel:+919953286867" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#07101d', fontSize: '0.86rem', textDecoration: 'none', fontWeight: 600 }}>
+                    <span style={{ color: '#34A853' }}>📞</span> +91 9953286867
+                  </a>
+                  <a
+                    href="https://wa.me/919953286867?text=Hello%20AppMotive%20Technologies%2C%20I%20am%20interested%20in%20discussing%20a%20project."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: '#25D366', fontSize: '0.82rem', fontWeight: 600, textDecoration: 'none' }}
+                  >
+                    (WhatsApp ↗)
+                  </a>
+                </div>
               </div>
             </div>
           </div>

@@ -85,13 +85,22 @@ const jsonLdOrganization = {
   logo: 'https://www.appmotivetechnologies.com/web-logo.png',
   description:
     'AppMotive Technologies is a digital product engineering agency specializing in Web Development, Mobile Apps, AI & Automation, and Cloud Infrastructure.',
-  contactPoint: {
-    '@type': 'ContactPoint',
-    email: 'info@appmotivetechnologies.com',
-    telephone: '+91-9837033948',
-    contactType: 'customer service',
-    availableLanguage: ['English', 'Hindi'],
-  },
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      email: 'info@appmotivetechnologies.com',
+      telephone: '+91-9837033948',
+      contactType: 'customer service',
+      availableLanguage: ['English', 'Hindi'],
+    },
+    {
+      '@type': 'ContactPoint',
+      email: 'info@appmotivetechnologies.com',
+      telephone: '+91-9953286867',
+      contactType: 'customer service',
+      availableLanguage: ['English', 'Hindi'],
+    },
+  ],
   sameAs: [
     'https://twitter.com',
     'https://linkedin.com',

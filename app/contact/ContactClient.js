@@ -153,7 +153,30 @@ export default function ContactClient() {
                 <span className="card-icon">📞</span>
                 <div>
                   <strong>Call / WhatsApp</strong>
-                  <a href="tel:+919837033948">+91 9837033948</a>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginTop: '4px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                      <a href="tel:+919837033948">+91 9837033948</a>
+                      <a
+                        href="https://wa.me/919837033948?text=Hello%20AppMotive%20Technologies%2C%20I%20am%20interested%20in%20discussing%20a%20project."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: '#25D366', fontSize: '0.82rem', fontWeight: 600, textDecoration: 'none' }}
+                      >
+                        💬 WhatsApp ↗
+                      </a>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                      <a href="tel:+919953286867">+91 9953286867</a>
+                      <a
+                        href="https://wa.me/919953286867?text=Hello%20AppMotive%20Technologies%2C%20I%20am%20interested%20in%20discussing%20a%20project."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: '#25D366', fontSize: '0.82rem', fontWeight: 600, textDecoration: 'none' }}
+                      >
+                        💬 WhatsApp ↗
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
 

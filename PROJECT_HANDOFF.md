@@ -87,7 +87,7 @@ The site is designed with a sleek Google-inspired aesthetic (`#4285F4`, `#34A853
   - Floating bottom-right widget with pulse indicator and greeting tooltip.
   - Dark-mode glassmorphic chat window matching AppMotive aesthetic.
   - Quick prompt suggestion pills for fast 1-click inquiries.
-  - Direct WhatsApp button (`+91 9837033948`) for instant human connection.
+  - Direct WhatsApp buttons (`+91 9837033948` & `+91 9953286867`) for instant human connection.
 - **Backend AI Engine (`app/api/chat/route.js`)**:
   - Powered by Google Gemini (`gemini-flash-lite-latest` / `gemini-3-flash-preview`).
   - System prompt trained on AppMotive services, pricing, timelines, tech stack, and NDA/IP policies.
